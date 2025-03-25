@@ -5,6 +5,7 @@ from sdk.rpc.wrappers.token import TokenAPI
 from sdk.rpc.wrappers.transaction import TransactionAPI
 from sdk.rpc.wrappers.staking import StakingAPI
 from sdk.rpc.wrappers.performance import PerformanceAPI
+from sdk.rpc.helpers.session import SessionManager
 
 import requests
 
@@ -37,6 +38,9 @@ class HeliusRPC:
         self.staking = StakingAPI(self)
         self.performance = PerformanceAPI(self)
 
+        session_manager = SessionManager()
+        self.session = session_manager.create_session("helius", self.url)
+
     def _make_request(self, method: str, params: Any = None) -> Dict:
         """
         Internal method to make RPC requests to the Helius API.
@@ -53,6 +57,6 @@ class HeliusRPC:
         if params is not None:
             payload["params"] = params
 
-        response = requests.post(self.url, headers=self.headers, json=payload)
+        response = self.session.post(self.url, headers=self.headers, json=payload)
 
         return response.json()
