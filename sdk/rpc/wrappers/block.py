@@ -1,8 +1,8 @@
 from typing import Dict
-from .base import HeliusAPIBase
+from .base import APIBase
 
 
-class BlockAPI(HeliusAPIBase):
+class BlockAPI(APIBase):
     """Block-related methods"""
 
     def get_block(

@@ -1,9 +1,9 @@
-from sdk.ws import HeliusWS
+from sdk.ws import WS
 import asyncio
 
 
 async def main():
-    client = HeliusWS("wss://mainnet.helius-rpc.com", "API_KEY")
+    client = WS("wss://mainnet.helius-rpc.com", "API_KEY")
     await client.connect()
 
     sub_id = await client.account_subscribe(

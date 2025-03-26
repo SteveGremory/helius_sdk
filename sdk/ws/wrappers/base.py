@@ -3,9 +3,9 @@ import asyncio
 import websockets
 
 
-class BaseHeliusWS:
+class BaseWS:
     """
-    Base class for Helius WebSocket API.
+    Base class for  WebSocket API.
 
     Provides core functionality for WebSocket connection management
     and request handling.
@@ -13,11 +13,11 @@ class BaseHeliusWS:
 
     def __init__(self, url, api_key=None):
         """
-        Initialize the BaseHeliusWS instance.
+        Initialize the BaseWS instance.
 
         Args:
-            url (str): The WebSocket URL (wss://mainnet.helius-rpc.com or wss://devnet.helius-rpc.com)
-            api_key (str, optional): The Helius API key.
+            url (str): The WebSocket URL (wss://mainnet.-rpc.com or wss://devnet.-rpc.com)
+            api_key (str, optional): The  API key.
         """
         if api_key:
             self.url = f"{url}/?api-key={api_key}"

@@ -1,8 +1,8 @@
 from typing import List, Dict
-from .base import HeliusAPIBase
+from .base import APIBase
 
 
-class TransactionAPI(HeliusAPIBase):
+class TransactionAPI(APIBase):
     """Transaction-related methods"""
 
     def get_fee_for_message(self, message: str, commitment: str = None) -> Dict:

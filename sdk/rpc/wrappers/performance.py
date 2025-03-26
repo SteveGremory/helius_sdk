@@ -1,8 +1,8 @@
 from typing import Dict
-from .base import HeliusAPIBase
+from .base import APIBase
 
 
-class PerformanceAPI(HeliusAPIBase):
+class PerformanceAPI(APIBase):
     """Performance monitoring methods"""
 
     def get_recent_performance_samples(self, limit: int = None) -> Dict:

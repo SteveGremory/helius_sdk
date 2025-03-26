@@ -1,7 +1,7 @@
-from .base import BaseHeliusWS
+from .base import BaseWS
 
 
-class LogsSubscriptionWS(BaseHeliusWS):
+class LogsSubscriptionWS(BaseWS):
     """
     Handles logs-related subscriptions.
     """
