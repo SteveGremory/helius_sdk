@@ -1,8 +1,8 @@
 from typing import Dict
-from .base import HeliusAPIBase
+from .base import APIBase
 
 
-class TokenAPI(HeliusAPIBase):
+class TokenAPI(APIBase):
     """Token-related methods"""
 
     def get_token_account_balance(self, pubkey: str, commitment: str = None) -> Dict:

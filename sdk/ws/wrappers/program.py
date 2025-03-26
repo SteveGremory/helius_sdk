@@ -1,7 +1,7 @@
-from .base import BaseHeliusWS
+from .base import BaseWS
 
 
-class ProgramSubscriptionWS(BaseHeliusWS):
+class ProgramSubscriptionWS(BaseWS):
     """
     Handles program-related subscriptions.
     """

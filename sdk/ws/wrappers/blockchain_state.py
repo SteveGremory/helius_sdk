@@ -1,7 +1,7 @@
-from .base import BaseHeliusWS
+from .base import BaseWS
 
 
-class BlockchainStateWS(BaseHeliusWS):
+class BlockchainStateWS(BaseWS):
     """
     Handles blockchain state subscriptions like slots, roots, and blocks.
     """
@@ -75,7 +75,7 @@ class BlockchainStateWS(BaseHeliusWS):
     async def block_subscribe(self, filter_type, config=None):
         """
         Subscribe to receive notification anytime a new block is confirmed or finalized.
-        NOTE: This method is marked as unstable in Solana documentation and is not supported by Helius.
+        NOTE: This method is marked as unstable in Solana documentation and is not supported by .
 
         Args:
             filter_type (str or dict): The filter criteria ("all" or {"mentionsAccountOrProgram": "pubkey"}).
@@ -84,9 +84,7 @@ class BlockchainStateWS(BaseHeliusWS):
         Returns:
             int: The subscription ID.
         """
-        print(
-            "WARNING: blockSubscribe is marked as unstable and is not supported by Helius."
-        )
+        print("WARNING: blockSubscribe is marked as unstable and is not supported by .")
         params = [filter_type]
         if config:
             params.append(config)

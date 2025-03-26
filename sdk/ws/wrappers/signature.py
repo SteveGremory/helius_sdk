@@ -1,7 +1,7 @@
-from .base import BaseHeliusWS
+from .base import BaseWS
 
 
-class SignatureSubscriptionWS(BaseHeliusWS):
+class SignatureSubscriptionWS(BaseWS):
     """
     Handles signature-related subscriptions.
     """

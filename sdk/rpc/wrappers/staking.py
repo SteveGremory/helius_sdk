@@ -1,8 +1,8 @@
 from typing import List, Dict
-from .base import HeliusAPIBase
+from .base import APIBase
 
 
-class StakingAPI(HeliusAPIBase):
+class StakingAPI(APIBase):
     """Staking-related methods"""
 
     def get_inflation_governor(self, commitment: str = None) -> Dict:

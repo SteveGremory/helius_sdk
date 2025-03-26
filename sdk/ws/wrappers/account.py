@@ -1,7 +1,7 @@
-from .base import BaseHeliusWS
+from .base import BaseWS
 
 
-class AccountSubscriptionWS(BaseHeliusWS):
+class AccountSubscriptionWS(BaseWS):
     """
     Handles account-related subscriptions.
     """

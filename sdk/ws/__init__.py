@@ -6,7 +6,7 @@ from sdk.ws.wrappers.blockchain_state import BlockchainStateWS
 from sdk.ws.wrappers.unstable import UnstableSubscriptionWS
 
 
-class HeliusWS(
+class WS(
     AccountSubscriptionWS,
     ProgramSubscriptionWS,
     LogsSubscriptionWS,
@@ -15,10 +15,10 @@ class HeliusWS(
     UnstableSubscriptionWS,
 ):
     """
-    A Python wrapper for Helius WebSocket API.
+    A Python wrapper for  WebSocket API.
 
     This class provides methods for subscribing to different types of real-time updates
-    from the Solana blockchain through Helius WebSocket API.
+    from the Solana blockchain through  WebSocket API.
     """
 
     pass

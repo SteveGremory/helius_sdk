@@ -1,8 +1,8 @@
-from .base import HeliusAPIBase
+from .base import APIBase
 from typing import List, Dict, Union, Optional, Any
 
 
-class AccountAPI(HeliusAPIBase):
+class AccountAPI(APIBase):
     """Account-related methods"""
 
     def get_account_info(

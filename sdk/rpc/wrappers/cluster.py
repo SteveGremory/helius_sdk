@@ -1,8 +1,8 @@
 from typing import Dict
-from .base import HeliusAPIBase
+from .base import APIBase
 
 
-class ClusterAPI(HeliusAPIBase):
+class ClusterAPI(APIBase):
     """Cluster-related methods"""
 
     def get_cluster_nodes(self) -> Dict:
